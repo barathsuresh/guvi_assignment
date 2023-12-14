@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .container {
+            position: relative;
+        }
+
+        #logoutButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+    <title>Profile</title>
+</head>
+<body>
+
+<div class="container">
+    <h2>Profile</h2>
+    <form id="profileForm">
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="contact">Contact No:</label>
+            <input type="text" id="contact" name="contact" required>
+        </div>
+        <button type="button" onclick="updateProfile()">Update Profile</button>
+
+        <!-- Logout button -->
+        <button type="button" id="logoutButton" onclick="logout()">Logout</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="../js/profile.js"></script>
+
+</body>
+</html>

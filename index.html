@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+</head>
+<body>
+
+    <script>
+        // Check if the user is already logged in
+        var loggedInUser = localStorage.getItem("loggedInUser");
+    
+        if (loggedInUser) {
+            // User is already logged in, redirect to the profile page
+            window.location.href = "html/profile.html";
+        }
+    </script>
+    
+<div class="container">
+    <h2>Welcome to My Website</h2>
+    <p>Please log in to continue.</p>
+
+    <!-- Include the login form -->
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="button" onclick="login()">Login</button>
+        <p>Don't have an account? <a href="html/signup.html">Signup here</a></p>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="js/login.js"></script>
+
+</body>
+</html>
