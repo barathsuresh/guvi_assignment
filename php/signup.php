@@ -14,17 +14,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         // Assuming $mongoDb is your MongoDB database connection
-        // $mongoCollection = $mongoDb->your_mongo_collection; // Replace with your actual MongoDB collection name
+        $mongoCollection = $mongoDb->users_guvi; // Replace with your actual MongoDB collection name
 
         // Store additional information in MongoDB
-        // $mongoData = [
-            // "username" => $username,
-            // "age" => $age,
-            // "dob" => $dob,
-            // "contact" => $contact,
-        // ];
+        $mongoData = [
+            "username" => $username,
+            "age" => $age,
+            "dob" => $dob,
+            "contact" => $contact,
+        ];
 
-        // $mongoCollection->insertOne($mongoData);
+        $mongoCollection->insertOne($mongoData);
 
         echo "Signup successful";
     } else {

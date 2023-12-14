@@ -11,6 +11,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// $mongoClient = new MongoDB\Client("mongodb://localhost:27017");
-// $mongoDb = $mongoClient->guvi; 
+$mongoClient = new MongoDB\Client("mongodb://localhost:27017");
+$mongoDb = $mongoClient->guvi; 
 ?>
